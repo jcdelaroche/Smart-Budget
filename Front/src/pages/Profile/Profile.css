@@ -1,0 +1,11 @@
+section.profile{
+    button{
+        margin-top: 1vh;
+    }
+    button:last-child{
+        background-color: #ed0000;
+        &:hover{
+            background-color: #ad0000;
+        }
+    }
+}

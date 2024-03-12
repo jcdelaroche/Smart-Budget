@@ -1,0 +1,13 @@
+.projectCard{
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}

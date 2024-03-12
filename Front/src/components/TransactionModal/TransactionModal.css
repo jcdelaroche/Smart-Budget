@@ -1,0 +1,53 @@
+section.transaction .modal {
+    z-index: 9999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: fit-content;
+    width: 30vw;
+    height: 70vh;
+    background-color: rgb(200, 200, 200);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    h2{
+        margin-top: 30px;
+    }
+    form{
+        margin-top: 50px;
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        :nth-child(2){
+            background-color: red;
+            &:hover{
+                background-color: #b30000;
+            }
+        }
+    }
+}
+
+button{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #0074ff;
+    color: white;
+    cursor: pointer;
+    &:hover {
+        background-color: #0056b3;
+    }
+}

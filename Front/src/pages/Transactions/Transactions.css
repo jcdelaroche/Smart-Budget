@@ -1,0 +1,6 @@
+section.transaction{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}

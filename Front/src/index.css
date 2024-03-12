@@ -1,0 +1,61 @@
+body {
+    background: linear-gradient(157deg, rgba(6,40,170,1) 0%, rgba(7,64,147,1) 40%, rgba(0,116,255,1) 100%);    
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    border: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+    #root{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+
+    section{
+        align-items: center;
+        text-align: center;
+        width: 75vw;
+        height: 98vh;
+        margin: auto;
+        background-color: rgba(100, 100, 100, 0.7);
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        color: white;
+    }
+}
+
+input[type="email"], input[type="password"], input[type="text"], input[type="date"], input[type="number"]{
+    width: 80%;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+select{
+    width: 80%;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* @media (min-width: 768px) {
+    body {
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+    }
+} */
