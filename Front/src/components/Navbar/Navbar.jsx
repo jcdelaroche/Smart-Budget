@@ -15,10 +15,10 @@ export default function Navbar() {
   return (
     <nav>
       <ul>
-        <li>
+        {/* <li>
           <img className="logo" src="/assets/SmartBudgetLogo.png" alt="logo" />
           <span className="navtext logo">SmartBudget</span>
-        </li>
+        </li> */}
         <li>
           <NavLink to='/'><FontAwesomeIcon icon={faHouse} /><span className="navtext">Accueil</span></NavLink>
         </li>
