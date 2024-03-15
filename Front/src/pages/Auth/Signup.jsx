@@ -18,6 +18,22 @@ export default function Signup(){
             toast.error("Veuillez remplir tous les champs")
             return
         }
+        if (password.length < 8 || !/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/[0-9]/.test(password) || !/[^A-Za-z0-9]/.test(password)){
+            toast.error("Le mot de passe doit contenir au moins 8 caractères dont un chiffre, une majuscule, une minuscule et un caractère spécial")
+            return
+        }
+        if (!/^[a-zA-ZÀ-ÿ\s]{2,30}$/.test(name)){
+            toast.error("Le nom doit contenir entre 2 et 30 caractères")
+            return
+        }
+        if (!/^[a-zA-ZÀ-ÿ\s]{2,30}$/.test(surname)){
+            toast.error("Le prénom doit contenir entre 2 et 30 caractères")
+            return
+        }
+        if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email)){
+            toast.error("Email invalide")
+            return
+        }
         const response = await axios.post('/api/users/signup', {
             email,
             password,

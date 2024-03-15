@@ -1,4 +1,4 @@
-import { faChartLine, faCreditCard, faDoorOpen, faMoneyBillTrendUp, faTrashCan, faTurnUp } from "@fortawesome/free-solid-svg-icons"
+import { faChartLine, faCreditCard, faDoorOpen, faMoneyBillTrendUp, faTurnUp } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./Navbar.css"
 import { NavLink, useParams, useNavigate } from "react-router-dom"
@@ -6,6 +6,7 @@ import axios from "../../utils/axios"
 import toast from "react-hot-toast"
 import ShareModal from "../ShareModal/ShareModal"
 import Cookies from "js-cookie"
+import DeleteModal from "../DeleteModal/DeleteModal"
 
 export default function NavbarDashboard() {
     const { id } = useParams()
@@ -48,7 +49,7 @@ export default function NavbarDashboard() {
                     <ShareModal />
                 </li>
                 <li>
-                    <button onClick={handleDelete}><FontAwesomeIcon icon={faTrashCan}/><span className="navtext">Supprimer le projet</span></button>
+                    <DeleteModal handleSubmit={handleDelete} label={'projet'} nav/>
                 </li>
                 <li>
                     <button onClick={handleLogout}><FontAwesomeIcon icon={faDoorOpen} /><span className="navtext">Déconnexion</span></button>

@@ -1,8 +1,8 @@
-import realAxios from 'axios'
+import baseAxios from 'axios'
 import Cookies from 'js-cookie';
 
 
-const axios = realAxios.create({
+const axios = baseAxios.create({
     baseURL: 'http://localhost:3000/',
 });
 

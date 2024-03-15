@@ -6,6 +6,7 @@ import axios from "../../utils/axios";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import toast from "react-hot-toast";
+import DeleteModal from "../../components/DeleteModal/DeleteModal";
 
 export default function Profile() {
     const navigate = useNavigate()
@@ -23,7 +24,7 @@ export default function Profile() {
         })
     }, [])
 
-    const handleSubmit = (e) => {
+    const handleModify = (e) => {
         e.preventDefault()
         axios.put('/api/users/user', {
             name,
@@ -53,9 +54,9 @@ export default function Profile() {
                     <Input label="Nom" type="text" value={name} onChange={(e) => setName(e.target.value)}/>
                     <Input label="Prénom" type="text" value={surname} onChange={(e) => setSurname(e.target.value)}/>
                     <Input label="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                    <button type="submit" onClick={handleSubmit}>Modifier le profil</button>
-                    <button type="submit" onClick={handleSuppr}>Supprimer le compte</button>
+                    <button type="submit" onClick={handleModify}>Modifier</button>
                 </form>
+                <DeleteModal handleSuppr={handleSuppr} label={'compte'}/>
             </section>
         </>
     )
